@@ -1,0 +1,34 @@
+<section class="gallery-header">
+  <div class="container">
+    <h1>Our Gallery</h1>
+    <p>Explore our learning environment, student activities, and team moments.</p>
+  </div>
+</section>
+
+<section class="gallery-content">
+  <div class="container">
+    <!-- Category Filter -->
+    <div class="gallery-filters">
+      <button class="filter-btn active" (click)="selectedCategory = null">All</button>
+      <button class="filter-btn" *ngFor="let category of categories" (click)="selectedCategory = category">
+        {{ category }}
+      </button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let image of filteredImages">
+        <img [src]="image.src" [alt]="image.alt" class="gallery-image" [class.gallery-logo]="image.category === 'Corporate Clients'" />
+        <div class="gallery-overlay">
+          <h3>{{ image.title }}</h3>
+          <span class="category-tag">{{ image.category }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note about personal images -->
+    <div class="gallery-note">
+      <p><strong>Note:</strong> Personal photos from our team and founder will be added soon. If you have images from LinkedIn or other sources, please save them to <code>public/assets/gallery/</code> and let us know the filenames to display them here.</p>
+    </div>
+  </div>
+</section>

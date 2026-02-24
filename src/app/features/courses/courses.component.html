@@ -1,0 +1,177 @@
+<section class="courses-header">
+  <div class="container">
+    <h1>Our Courses</h1>
+    <p>Choose from our comprehensive range of technology courses designed to boost your career.</p>
+  </div>
+</section>
+
+<section class="toc">
+  <div class="container">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li *ngFor="let course of courses; let i = index">
+        <a [href]="'#course-' + i">{{ course.title }}</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="courses-content">
+  <div class="container">
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of courses; let i = index" [id]="'course-' + i">
+        <img [src]="course.image" [alt]="course.title" class="course-image" />
+        <div class="course-info">
+          <h3>{{ course.title }}</h3>
+          <p class="course-description">{{ course.description }}</p>
+          <div class="course-details">
+            <span class="duration">Duration: {{ course.duration }}</span>
+            <button class="enroll-btn">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="corporate-clients">
+  <div class="container">
+    <h2>Trainings Given (Corporate Clients)</h2>
+    <table class="clients-table">
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Company</th>
+          <th>Trainings Given</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td>Cognizant, Bangalore</td>
+          <td>Java, SQL, PL/SQL, HTML, CSS, JavaScript.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Hexaware, Bangalore</td>
+          <td>Java, JDBC, Python, Web Testing.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>SEIMENS, Bangalore</td>
+          <td>HTML, CSS, JS, Node, Express, Angular, MongoDB.</td>
+        </tr>
+        <tr>
+          <td><img src="assets/gallery/LnT.png" alt="L&T" class="client-logo"></td>
+          <td>L&T, Chennai</td>
+          <td>Core Java, SQL, PL/SQL, Python.</td>
+        </tr>
+        <tr>
+          <td><img src="assets/gallery/tcs.png" alt="TCS" class="client-logo"></td>
+          <td>TCS Hyderabad</td>
+          <td>DBMS, Java, J2EE, HTML, CSS, JS, Angular.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>HSBC, Pune</td>
+          <td>Java, Servlet, JSP, HTML, JavaScript.</td>
+        </tr>
+        <tr>
+          <td><img src="assets/gallery/jpm.png" alt="JP Morgan" class="client-logo"></td>
+          <td>JP Morgan, Bangalore</td>
+          <td>DBMS, Java, J2EE, HTML, CSS, JS, Angular.</td>
+        </tr>
+        <tr>
+          <td><img src="assets/gallery/IBM.png" alt="IBM" class="client-logo"></td>
+          <td>IBM, Bangalore</td>
+          <td>Core Java, Adv. Java, XML.</td>
+        </tr>
+        <tr>
+          <td><img src="assets/gallery/techM.png" alt="Tech Mahindra" class="client-logo"></td>
+          <td>Tech Mahindra, Bangalore</td>
+          <td>Java, Spring Boot, Angular 10+, Oracle.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>FIS Global, Bangalore</td>
+          <td>Java, JDBC, Spring, MySQL.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>E & Y, Bangalore</td>
+          <td>Java, J2EE, HTML, JS, SQL, PL/SQL, Python.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>MKS, Bangalore</td>
+          <td>DBMS, Java, J2EE, HTML, CSS, JS, Angular.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phillips, Bangalore</td>
+          <td>Core Java, Adv. Java, XML.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>IGT IT Solution, Bangalore</td>
+          <td>Java, Spring Boot, Angular 10+, Oracle.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Pentachromic, Bangalore</td>
+          <td>Java, JDBC, Spring, MySQL.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Niteo IT Solutions, Bangalore</td>
+          <td>Java, J2EE, HTML, JS, SQL, PL/SQL, Python.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>SunSoft Technologies, Bangalore</td>
+          <td>Java, J2EE, Spring, Hibernate, SQL, JS, Node, Python.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>IDP, Chennai</td>
+          <td>Core Java, Adv. Java, XML.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Samsung, Bangalore</td>
+          <td>Core Java, HTML5, CSS3, JavaScript, Angular.</td>
+        </tr>
+        <tr>
+          <td><img src="assets/gallery/Wipro.png" alt="Wipro" class="client-logo"></td>
+          <td>Wipro Bangalore</td>
+          <td>Java, Spring, Hibernate, Angular.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>CGI Bangalore</td>
+          <td>Java, Spring, Hibernate, SQL, JS, Node.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Wonder Soft Chennai</td>
+          <td>HTML, CSS, JS, Bootstrap, Angular.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Zee Chanel Bangalore</td>
+          <td>Angular, Java, JDBC, Spring.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Edureka</td>
+          <td>HTML, CSS, JS, Node, Express, Angular, MongoDB.</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Simplilearn</td>
+          <td>Java Full stack with Angular.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

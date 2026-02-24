@@ -1,0 +1,19 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#1e3a8a" stroke="#ffffff" stroke-width="3"/>
+
+  <!-- Letter T -->
+  <text x="75" y="90" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="#ffffff">T</text>
+
+  <!-- Letter S -->
+  <text x="105" y="90" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="#ffffff">S</text>
+
+  <!-- Letter M -->
+  <text x="80" y="120" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff">M</text>
+
+  <!-- Letter V -->
+  <text x="110" y="120" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff">V</text>
+
+  <!-- Academy text -->
+  <text x="100" y="150" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">ACADEMY</text>
+</svg>
