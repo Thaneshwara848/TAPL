@@ -1,6 +1,6 @@
 /* Contact Component Styles */
 .contact-header {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  background: linear-gradient(120deg, #db2777 0%, #8b5cf6 55%, #4f46e5 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -32,12 +32,16 @@
 }
 
 .contact-info h2 {
-  color: #007bff;
+  color: #7c3aed;
   margin-bottom: 2rem;
 }
 
 .info-item {
   margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: linear-gradient(110deg, #fdf2f8, #f5f3ff);
+  border-radius: 10px;
+  border-left: 4px solid #db2777;
 }
 
 .info-item h3 {
@@ -51,7 +55,7 @@
 }
 
 .contact-form h2 {
-  color: #007bff;
+  color: #7c3aed;
   margin-bottom: 2rem;
 }
 
@@ -79,7 +83,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
 }
 
 .form-group input.error,
@@ -94,7 +99,7 @@
 }
 
 .submit-btn {
-  background-color: #007bff;
+  background: linear-gradient(110deg, #7c3aed, #db2777);
   color: white;
   border: none;
   padding: 0.75rem 2rem;
@@ -106,7 +111,7 @@
 }
 
 .submit-btn:hover:not(:disabled) {
-  background-color: #0056b3;
+  background: linear-gradient(110deg, #6d28d9, #be185d);
 }
 
 .submit-btn:disabled {

@@ -1,6 +1,6 @@
 /* Footer Styles */
 .footer {
-  background-color: #343a40; /* Dark corporate */
+  background: linear-gradient(115deg, #1e1b4b, #312e81 55%, #164e63);
   color: white;
   padding: 2rem 0 1rem;
   margin-top: auto;
@@ -17,7 +17,7 @@
 
 .footer-section h3, .footer-section h4 {
   margin-bottom: 1rem;
-  color: #007bff;
+  color: #f9a8d4;
 }
 
 .footer-section p, .footer-section ul {
@@ -40,7 +40,7 @@
 }
 
 .footer-section a:hover {
-  color: #007bff;
+  color: #67e8f9;
 }
 
 .social-links {
@@ -55,13 +55,13 @@
 }
 
 .social-link:hover {
-  color: #007bff;
+  color: #67e8f9;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 1rem;
-  border-top: 1px solid #495057;
+  border-top: 1px solid rgba(196, 181, 253, 0.35);
   margin-top: 2rem;
-  color: #6c757d;
+  color: #c4b5fd;
 }

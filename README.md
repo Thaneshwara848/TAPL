@@ -1,42 +1,33 @@
-# Thanesh Academy Pvt Ltd
+# UpSkillWithThanesh
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
 
-## Email Configuration
+## Contact Enquiry Emails
 
-The contact form sends emails using EmailJS. To set it up:
+The contact form uses EmailJS to send each enquiry to `Thaneshwara555@gmail.com`.
+Email notifications are not active until EmailJS is configured:
 
-1. **Install EmailJS**:
-   ```bash
-   npm install @emailjs/browser
+1. Create an account at [EmailJS](https://www.emailjs.com/), connect an email service, and create a template.
+2. Set the template recipient to `{{to_email}}`, reply-to to `{{reply_to}}`, and subject to `New training enquiry: {{subject}}`.
+3. Use this template body so the full enquiry arrives in the email:
+
+   ```text
+   New training enquiry
+
+   Name: {{from_name}}
+   Email: {{from_email}}
+   Phone: {{phone}}
+   Training topic / subject: {{subject}}
+   Submitted: {{sent_at}}
+
+   Message:
+   {{message}}
    ```
 
-2. **Create EmailJS Account**:
-   - Go to [EmailJS](https://www.emailjs.com/)
-   - Create a free account
-   - Add your email service (Gmail, Outlook, etc.)
-
-3. **Configure Email Template**:
-   - Create a new email template with these variables:
-     - `{{from_name}}` - Contact's name
-     - `{{from_email}}` - Contact's email
-     - `{{phone}}` - Contact's phone
-     - `{{subject}}` - Message subject
-     - `{{message}}` - Message content
-     - `{{to_email}}` - Your email (thaneshwara555@gmail.com)
-
-4. **Update Contact Component**:
-   - Open `src/app/features/contact/contact.component.ts`
-   - Replace the placeholder values:
-     ```typescript
-     const serviceId = 'your_actual_service_id';
-     const templateId = 'your_actual_template_id';
-     const publicKey = 'your_actual_public_key';
-     ```
-   - Uncomment the EmailJS import and send line
-
-5. **Test the Contact Form**:
-   - Submit the form to ensure emails are sent to thaneshwara555@gmail.com
+4. In `src/app/features/contact/contact.component.ts`, set `EMAILJS_SERVICE_ID`,
+   `EMAILJS_TEMPLATE_ID`, and `EMAILJS_PUBLIC_KEY` to the values from EmailJS.
+   The public key is intended for browser use; never put a private key in frontend code.
+5. Build and deploy the site, then submit a test enquiry and verify the email arrives.
 
 ## Development server
 

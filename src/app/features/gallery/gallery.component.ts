@@ -23,7 +23,7 @@ export class GalleryComponent {
     {
       src: '/assets/gallery/Thanesh.png',
       alt: 'Thanesh profile photo',
-      title: 'Founder & Director',
+      title: 'Director',
       category: 'Team'
     },
     
@@ -61,6 +61,24 @@ export class GalleryComponent {
       src: 'assets/gallery/Altimetrik.png',
       alt: 'Altimetrik logo',
       title: 'Altimetrik',
+      category: 'Corporate Clients'
+    },
+    {
+      src: 'assets/gallery/Hexaware.png',
+      alt: 'Hexaware logo',
+      title: 'Hexaware',
+      category: 'Corporate Clients'
+    },
+    {
+      src: 'assets/gallery/DayForce.png',
+      alt: 'Dayforce logo',
+      title: 'Dayforce',
+      category: 'Corporate Clients'
+    },
+    {
+      src: 'assets/gallery/SLK.png',
+      alt: 'SLK logo',
+      title: 'SLK',
       category: 'Corporate Clients'
     },
     {

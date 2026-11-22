@@ -1,6 +1,6 @@
 /* Gallery Component Styles */
 .gallery-header {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  background: linear-gradient(120deg, #059669 0%, #0891b2 55%, #4f46e5 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -30,8 +30,8 @@
 
 .filter-btn {
   background: #f8f9fa;
-  border: 2px solid #007bff;
-  color: #007bff;
+  border: 2px solid #0891b2;
+  color: #0e7490;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
@@ -41,7 +41,7 @@
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: #007bff;
+  background: linear-gradient(110deg, #059669, #0891b2);
   color: white;
 }
 
@@ -114,7 +114,7 @@
 .gallery-note {
   margin-top: 3rem;
   padding: 2rem;
-  background: #f8f9fa;
+  background: linear-gradient(110deg, #ecfdf5, #ecfeff);
   border-radius: 10px;
   text-align: center;
 }

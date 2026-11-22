@@ -1,32 +1,64 @@
 <section class="hero">
   <div class="hero-content">
-    <h1>Welcome to Thanesh Academy Pvt Ltd</h1>
-    <p>Empowering the next generation of tech professionals with cutting-edge education and hands-on training.</p>
-    <a routerLink="/courses" class="cta-button">Explore Our Courses</a>
+    <p class="hero-eyebrow">Software Professional at Google | Technology Trainer</p>
+    <h1>Learn. Build. Grow with Thanesh.</h1>
+    <p>Currently working at Google, I bring hands-on industry experience to practical training across full-stack development, microservices, cloud, DevOps, AI/ML, and more.</p>
+    <div class="hero-actions">
+      <a routerLink="/courses" class="cta-button">Explore Training Programs</a>
+      <a href="https://www.linkedin.com/in/thaneshwara-m-9a6745161/" class="cta-button linkedin-button" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      <a href="https://github.com/Thaneshwara848" class="cta-button linkedin-button" target="_blank" rel="noopener noreferrer">View GitHub</a>
+    </div>
   </div>
   <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Students learning" />
+    <img src="/assets/gallery/Home.png" alt="Thanesh leading a technology training session" />
   </div>
 </section>
 
 <section class="about-preview">
   <div class="container">
-    <h2>Why Choose Us?</h2>
+    <h2>How I Can Help</h2>
     <div class="features">
       <div class="feature">
         <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Expert Instructors" />
-        <h3>Expert Instructors</h3>
-        <p>Learn from industry professionals with years of experience.</p>
+        <h3>Technology Training</h3>
+        <p>Explore practical training across modern technology topics.</p>
       </div>
       <div class="feature">
         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hands-on Learning" />
         <h3>Hands-on Learning</h3>
-        <p>Practical projects and real-world applications.</p>
+        <p>Build understanding through practical examples and real-world applications.</p>
       </div>
       <div class="feature">
         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Career Support" />
-        <h3>Career Support</h3>
-        <p>Job placement assistance and career guidance.</p>
+        <h3>Corporate Training</h3>
+        <p>Browse selected corporate training experience and topics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="training-delivered" aria-labelledby="training-delivered-title">
+  <div class="container">
+    <h2 id="training-delivered-title">Training &amp; Industry Experience</h2>
+    <div class="training-carousel" role="region" aria-roledescription="carousel" aria-label="Training and industry experience">
+      <div class="training-slide google-slide" *ngIf="activeTrainingSlide === 0" role="group" aria-roledescription="slide" aria-label="Slide 1 of 2">
+        <h3>Currently Working at Google</h3>
+        <img src="/assets/gallery/Google.png" alt="Thanesh's Google experience and technology stack">
+      </div>
+      <div class="training-slide clients-slide" *ngIf="activeTrainingSlide === 1" role="group" aria-roledescription="slide" aria-label="Slide 2 of 2">
+        <h3>Trainings Delivered</h3>
+        <div class="training-client-grid" role="list">
+          <div class="training-client" *ngFor="let client of trainingClients" role="listitem">
+            <img [src]="client.logo" [alt]="client.name + ' logo'" (error)="onLogoError($event)" loading="lazy" referrerpolicy="no-referrer">
+            <span>{{ client.name }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="training-carousel-controls">
+        <button type="button" class="carousel-arrow" aria-label="Previous slide" (click)="previousTrainingSlide()">Previous</button>
+        <button type="button" class="carousel-dot" [class.active]="activeTrainingSlide === 0" aria-label="Show Google work experience slide" [attr.aria-pressed]="activeTrainingSlide === 0" (click)="showTrainingSlide(0)"></button>
+        <button type="button" class="carousel-dot" [class.active]="activeTrainingSlide === 1" aria-label="Show trainings delivered slide" [attr.aria-pressed]="activeTrainingSlide === 1" (click)="showTrainingSlide(1)"></button>
+        <button type="button" class="carousel-arrow" aria-label="Next slide" (click)="nextTrainingSlide()">Next</button>
       </div>
     </div>
   </div>

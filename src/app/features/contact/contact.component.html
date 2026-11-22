@@ -1,7 +1,7 @@
 <section class="contact-header">
   <div class="container">
-    <h1>Contact Us</h1>
-    <p>Get in touch with us for inquiries, admissions, or any questions about our courses.</p>
+    <h1>Contact</h1>
+    <p>Get in touch to discuss technology training, projects, or collaboration.</p>
   </div>
 </section>
 
@@ -9,27 +9,19 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info">
-        <h2>Get In Touch</h2>
-        <div class="info-item">
-          <h3>Address</h3>
-          <p>[Your Complete Address Here]<br>City, State, PIN Code</p>
-        </div>
+        <h2>Get in Touch</h2>
         <div class="info-item">
           <h3>Phone</h3>
-          <p>+91 12345 67890</p>
+          <p><a href="tel:+919740435150">+91 97404 35150</a></p>
         </div>
         <div class="info-item">
           <h3>Email</h3>
-          <p>info@thaneshacademypvtltd.com</p>
-        </div>
-        <div class="info-item">
-          <h3>Office Hours</h3>
-          <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
+          <p><a href="mailto:Thaneshwara555@gmail.com">Thaneshwara555@gmail.com</a></p>
         </div>
       </div>
 
       <div class="contact-form">
-        <h2>Send us a Message</h2>
+        <h2>Send a Message</h2>
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="name">Full Name *</label>
@@ -81,12 +73,14 @@
           </button>
         </form>
 
-        <div class="success-message" *ngIf="isSubmitted && !submitMessage.includes('error')">
+        <div class="success-message" *ngIf="isSubmitted">
           {{ submitMessage }}
         </div>
 
-        <div class="error-message" *ngIf="submitMessage && submitMessage.includes('error')">
+        <div class="error-message" role="alert" *ngIf="submitMessage && !isSubmitted">
           {{ submitMessage }}
+          Please connect with me on
+          <a href="https://wa.me/919740435150" target="_blank" rel="noopener noreferrer">WhatsApp at +91 97404 35150</a>.
         </div>
       </div>
     </div>

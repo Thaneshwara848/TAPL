@@ -1,6 +1,6 @@
 /* Courses Component Styles */
 .courses-header {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  background: linear-gradient(120deg, #0891b2 0%, #2563eb 55%, #7c3aed 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -18,13 +18,13 @@
 
 .toc {
   padding: 2rem;
-  background-color: #f8f9fa;
+  background: linear-gradient(110deg, #ecfeff, #f5f3ff);
   border-bottom: 1px solid #dee2e6;
 }
 
 .toc h2 {
   text-align: center;
-  color: #007bff;
+  color: #6d28d9;
   margin-bottom: 1rem;
 }
 
@@ -51,12 +51,12 @@
 
 .toc a {
   text-decoration: none;
-  color: #007bff;
+  color: #5b21b6;
   font-weight: bold;
 }
 
 .toc a:hover {
-  color: #0056b3;
+  color: #db2777;
 }
 
 .courses-content {
@@ -79,7 +79,16 @@
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   overflow: hidden;
+  border-top: 4px solid #7c3aed;
   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:nth-child(3n + 2) {
+  border-top-color: #06b6d4;
+}
+
+.course-card:nth-child(3n) {
+  border-top-color: #f97316;
 }
 
 .course-card:hover {
@@ -98,7 +107,7 @@
 }
 
 .course-info h3 {
-  color: #007bff;
+  color: #6d28d9;
   margin-bottom: 1rem;
 }
 
@@ -120,7 +129,7 @@
 }
 
 .enroll-btn {
-  background-color: #007bff;
+  background: linear-gradient(110deg, #6d28d9, #db2777);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -131,7 +140,7 @@
 }
 
 .enroll-btn:hover {
-  background-color: #0056b3;
+  background: linear-gradient(110deg, #5b21b6, #be185d);
 }
 
 /* Responsive */
@@ -148,74 +157,5 @@
     flex-direction: column;
     gap: 1rem;
     align-items: stretch;
-  }
-}
-
-/* Corporate Clients Section */
-.corporate-clients {
-  padding: 4rem 2rem;
-  background-color: #f8f9fa;
-}
-
-.corporate-clients h2 {
-  text-align: center;
-  color: #007bff;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-}
-
-.clients-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.clients-table th,
-.clients-table td {
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.clients-table th {
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-}
-
-.clients-table tr:nth-child(even) {
-  background-color: #f8f9fa;
-}
-
-.clients-table tr:hover {
-  background-color: #e9ecef;
-}
-
-.client-logo {
-  width: 60px;
-  height: 40px;
-  object-fit: contain;
-  border-radius: 4px;
-  background-color: white;
-  padding: 2px;
-}
-
-/* Responsive for table */
-@media (max-width: 768px) {
-  .clients-table {
-    font-size: 0.9rem;
-  }
-
-  .clients-table th,
-  .clients-table td {
-    padding: 0.5rem;
-  }
-
-  .client-logo {
-    width: 40px;
-    height: 30px;
   }
 }
